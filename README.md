@@ -26,7 +26,7 @@ To enable ASP.NET caching on a database, the aspnet_regsql.exe command line tool
 
 The stored procedures are what's used by an application to enable caching.
 
-The solution to enable View caching was to tinker with these stored procedures. Very simply, rather than throwing an error if the application tried to create a cache notification on a view (original behaviour), the behaviour was changed to loop through all of the tables involved in the view and creates the triggers on each.
+The solution to enable View caching was to tinker with these stored procedures. Very simply, rather than throwing an error if the application tried to create a cache notification on a view (original behaviour), the behaviour was changed to loop through all of the tables involved in the view and creates the triggers on each. This then feeds back into the rest of the mechanism.
 
 ## Note
 
